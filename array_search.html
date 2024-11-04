@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array_Search</title>
+</head>
+<script>
+    //  let data = [45,87,98,5,6,46,23,15,49,97,56];
+    // let item = 23;
+    // let index = undefined;
+
+    // for (let i = 0; i <= data.length-1; i++) {
+    //     if (data[i] === item) {
+    //         index = i;
+    //         break; 
+    //     }
+    // }
+    // console.log(index);
+    
+    function searchEl(){
+        let data = [45,87,98,5,6,46,23,15,49,97,56];
+    let item = document.getElementById('posi').value;
+    item = parseInt(item)
+    let index = undefined;
+
+    for (let i = 0; i <= data.length-1; i++) {
+        if (data[i] === item) {
+            index = i;
+            break; 
+        }
+    }
+    console.log(index);
+    }
+
+
+</script>
+<body>
+
+    <input type="text" id="posi" placeholder="Enter Your Position">
+    <button onclick="searchEl()">Search</button>
+</body>
+</html>
