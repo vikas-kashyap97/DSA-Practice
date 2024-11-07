@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursion</title>
+  </head>
+  <script>
+    let money = 100;
+    let totalApple = 0;
+
+    function buyApple(x) {
+      if (x > 0) {
+        console.log("I have " + x + " rs. and " + totalApple + " apples.");
+        buyMore(x);
+      } else {
+        console.log("I don't have more money. Total apples bought: " + totalApple);
+      }
+    }
+
+    function buyMore(x) {
+      totalApple++;
+      buyApple(x - 10);
+    }
+
+    buyApple(money);
+  </script>
+  <body></body>
+</html>
